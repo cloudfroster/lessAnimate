@@ -1,0 +1,13 @@
+{
+  "name": "lessAnimate",
+  "version": "1.0.2",
+  "author": "marchen",
+  "private": false,
+  "scripts": {
+    "start": "node.js"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-header": "^1.2.2"
+  }
+}

@@ -1,0 +1,24 @@
+# OS and IDE
+.emacs*
+*.flymake
+*~
+.#*
+.idea
+*.sublime-*
+
+# npm
+node_modules
+npm-debug.log
+
+# project-specific
+server/css/maxin/*.css
+server/css/test.less
+server/css/test.css
+
+# grunt & gulp
+.grunt
+.gulp
+
+# gradle
+.gradle
+out

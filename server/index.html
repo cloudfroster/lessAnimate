@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 animation by less</title>
+    <meta name="keywords" content="CSS3 animation by less"/>
+    <meta name="description" content="CSS3 animation by less"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link type="image/x-icon" href="images/favicon24.png" rel="icon">
+    <link type="image/x-icon" href="images/favicon24.png" rel="shortcut icon">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+</head>
+<body>
+<div class="fork-me" style="position: absolute;right: 0px;top: 0px;z-index: 1001;">
+    <a href="https://github.com/chen844033231/css3.git"><img src="images/forkme.png" width="149" height="149" alt="github"/></a>
+</div>
+<div class="nav">
+    <div class="nav-a">
+        <a href="#0">效果预览</a>
+        <a href="#1">lessAnimation</a>
+        <a href="#2">更新日志</a>
+    </div>
+</div>
+<div class='header'>
+    lessAnimate<span>— <em id="Jallnum"></em>种</span>
+
+    <p>基于 less 构建的 css3 动画库</p>
+
+    <div class="header-btn">
+        <a href="http://git.oschina.net/marchen/lessAnimate/blob/master/build/lessAnimate.less"
+           target="_blank">下载</a>
+    </div>
+
+</div>
+<div id="main" class="main">
+    <h2 class="main-wrap0">效果预览</h2>
+
+    <div class="show-box">
+        <div id="Janimate" class="show-demo"></div>
+    </div>
+
+    <div class="select">
+        <input id="Jselectname" class="selectname" disabled="true" value="bounce"></input>
+        <select id="Jselect">
+            <optgroup label="Attention Seekers">
+                <option value="bounce">bounce</option>
+                <option value="flash">flash</option>
+                <option value="pulse">pulse</option>
+                <option value="rubberBand">rubberBand</option>
+                <option value="shake">shake</option>
+                <option value="swing">swing</option>
+                <option value="tada">tada</option>
+                <option value="rotating">rotating</option>
+            </optgroup>
+
+            <optgroup label="Specials">
+                <option value="hingeLeft">hingeLeft</option>
+                <option value="hingeRight">hingeRight</option>
+                <option value="rollInLeft">rollInLeft</option>
+                <option value="rollInRight">rollInRight</option>
+                <option value="rollOutLeft">rollOutLeft</option>
+                <option value="rollOutRight">rollOutRight</option>
+            </optgroup>
+
+            <optgroup label="Wobbles">
+                <option value="wobble">wobble</option>
+                <option value="wobbleTop">wobbleTop</option>
+                <option value="wobbleBottom">wobbleBottom</option>
+                <option value="wobbleSkew">wobbleSkew</option>
+            </optgroup>
+
+            <optgroup label="Bouncing Entrances">
+                <option value="bounceIn">bounceIn</option>
+                <option value="bounceInDown">bounceInDown</option>
+                <option value="bounceInLeft">bounceInLeft</option>
+                <option value="bounceInRight">bounceInRight</option>
+                <option value="bounceInUp">bounceInUp</option>
+            </optgroup>
+
+            <optgroup label="Bouncing Exits">
+                <option value="bounceOut">bounceOut</option>
+                <option value="bounceOutDown">bounceOutDown</option>
+                <option value="bounceOutLeft">bounceOutLeft</option>
+                <option value="bounceOutRight">bounceOutRight</option>
+                <option value="bounceOutUp">bounceOutUp</option>
+            </optgroup>
+
+            <optgroup label="Fading Entrances">
+                <option value="fadeIn">fadeIn</option>
+                <option value="fadeInDown">fadeInDown</option>
+                <option value="fadeInDownBig">fadeInDownBig</option>
+                <option value="fadeInLeft">fadeInLeft</option>
+                <option value="fadeInLeftBig">fadeInLeftBig</option>
+                <option value="fadeInRight">fadeInRight</option>
+                <option value="fadeInRightBig">fadeInRightBig</option>
+                <option value="fadeInUp">fadeInUp</option>
+                <option value="fadeInUpBig">fadeInUpBig</option>
+            </optgroup>
+
+            <optgroup label="Fading Exits">
+                <option value="fadeOut">fadeOut</option>
+                <option value="fadeOutDown">fadeOutDown</option>
+                <option value="fadeOutDownBig">fadeOutDownBig</option>
+                <option value="fadeOutLeft">fadeOutLeft</option>
+                <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                <option value="fadeOutRight">fadeOutRight</option>
+                <option value="fadeOutRightBig">fadeOutRightBig</option>
+                <option value="fadeOutUp">fadeOutUp</option>
+                <option value="fadeOutUpBig">fadeOutUpBig</option>
+            </optgroup>
+
+            <optgroup label="Flip Entrances">
+                <option value="flip">flip</option>
+                <option value="flipInX">flipInX</option>
+                <option value="flipInY">flipInY</option>
+                <option value="flipInLeft">flipInLeft</option>
+                <option value="flipInRight">flipInRight</option>
+                <option value="flipInDown">flipInDown</option>
+                <option value="flipInUp">flipInUp</option>
+            </optgroup>
+
+            <optgroup label="Flip Exits">
+                <option value="flipOutX">flipOutX</option>
+                <option value="flipOutY">flipOutY</option>
+                <option value="flipOutLeft">flipOutLeft</option>
+                <option value="flipOutRight">flipOutRight</option>
+                <option value="flipOutDown">flipOutDown</option>
+                <option value="flipOutUp">flipOutUp</option>
+            </optgroup>
+
+            <optgroup label="Scales">
+                <option value="scaleIn">scaleIn</option>
+                <option value="scaleInX">scaleInX</option>
+                <option value="scaleInY">scaleInY</option>
+                <option value="scaleOut">scaleOut</option>
+                <option value="scaleOutX">scaleOutX</option>
+                <option value="scaleOutY">scaleOutY</option>
+            </optgroup>
+
+            <optgroup label="Lightspeed">
+                <option value="lightSpeedInLeft">lightSpeedInLeft</option>
+                <option value="lightSpeedInRight">lightSpeedInRight</option>
+                <option value="lightSpeedOutLeft">lightSpeedOutLeft</option>
+                <option value="lightSpeedOutRight">lightSpeedOutRight</option>
+            </optgroup>
+
+            <optgroup label="Rotating Entrances">
+                <option value="rotateIn">rotateIn</option>
+                <option value="rotateInDownLeft">rotateInDownLeft</option>
+                <option value="rotateInDownRight">rotateInDownRight</option>
+                <option value="rotateInUpLeft">rotateInUpLeft</option>
+                <option value="rotateInUpRight">rotateInUpRight</option>
+            </optgroup>
+
+            <optgroup label="Rotating Exits">
+                <option value="rotateOut">rotateOut</option>
+                <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+                <option value="rotateOutDownRight">rotateOutDownRight</option>
+                <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                <option value="rotateOutUpRight">rotateOutUpRight</option>
+            </optgroup>
+
+            <optgroup label="Zoom Entrances">
+                <option value="zoomIn">zoomIn</option>
+                <option value="zoomInDown">zoomInDown</option>
+                <option value="zoomInLeft">zoomInLeft</option>
+                <option value="zoomInRight">zoomInRight</option>
+                <option value="zoomInUp">zoomInUp</option>
+            </optgroup>
+
+            <optgroup label="Zoom Exits">
+                <option value="zoomOut">zoomOut</option>
+                <option value="zoomOutDown">zoomOutDown</option>
+                <option value="zoomOutLeft">zoomOutLeft</option>
+                <option value="zoomOutRight">zoomOutRight</option>
+                <option value="zoomOutUp">zoomOutUp</option>
+            </optgroup>
+        </select>
+        <a class="select-btn" href="javascript:;">Animate it</a>
+    </div>
+
+    <h2>LESS动画优点</h2>
+
+    <p><span class="s_icon">·</span> 快速开发css3动画</p>
+
+    <p><span class="s_icon">·</span> 采用less mixins写法，不会生成冗余css</p>
+
+    <p><span class="s_icon">·</span> 已加入主流浏览器前缀，保证最大兼容性</p>
+
+    <p><span class="s_icon">·</span> LESS-Animation 部分mixins支持传参，自定义动画幅度</p>
+
+    <p class="p-tips">（PS：sublime的less2css插件可能不支持编译本库的一些新写法，建议使用官方less编译、考拉、前端构建工具等方式编译）</p>
+
+    <h2>使用方法</h2>
+
+    <p><span class="s_icon">·</span> 下载 lessAnimation.less 文件，git地址：</p>
+
+    <div class="code">
+      <pre>
+<code class="less">http://git.oschina.net/marchen/lessAnimate/blob/master/build/lessAnimate.less
+</code></pre>
+    </div>
+
+    <p><span class="s_icon">·</span> 在主less文件引入lessAnimation.less</p>
+
+    <div class="code">
+      <pre>
+<code class="less">@import "lessAnimation.less";
+</code></pre>
+    </div>
+
+    <!-- LESS-Animation -->
+    <h3 id="animation" class="main-wrap1">lessAnimation</h3>
+    <h4>定义引用</h4>
+
+    <p>对于动画效果比较少的页面,可以直接在主less文件头部先定义需要用到的动画,然后后面需要用动画的地方,直接就可以引用了.(推荐给相同动画的不同效果命名不同的名字)</p>
+
+    <p>注意:不推荐这样引用动画,这样会生成多余的同名@keyframe定义</p>
+
+    <p><span class="s_icon">·</span> 栗子一：引用 bounce 动画，只需在所在元素节点加入 .bounce();</p>
+
+    <div class="code">
+      <pre>
+<code class="less">
+    .bounce {
+        .bounce();  //不推荐,如果是特殊定义的效果可以这样写.比如:
+                    //.bounce(@t:100;@n:bounceHeight);
+        animation: bounce 1s ease-in-out;
+    }
+</code></pre>
+    </div>
+
+    <p>推荐方式:</p>
+
+    <div class="code">
+      <pre>
+<code class="less">
+    //effect from lessAnimate.less
+    .bounce();
+    .bounce(@t:100;@n:bounceHeight);
+
+    //Applying effect
+    .bounce{
+        animation: bounce 1s ease-in-out;
+    }
+    .flash {
+        animation: bounceHeight 1s ease-in-out;
+    }
+</code></pre>
+    </div>
+
+    <p><span class="s_icon">·</span> 栗子二: 如果是引用的效果比较多,可以新建一个pickAnimate.less来从lessAnimate.less中选择自己的动画,然后在主less文件中引用pickAnimate.less文件即可.</p>
+
+    <p>pickAnimate.less</p>
+    <div class="code">
+      <pre>
+<code class="less">
+    //pick animate effect from lessAnimate
+    .bounce();
+    .flash();
+    .swing(@d:10deg,@n:swingHeight);
+</code></pre>
+    </div>
+
+    <h4>mixin传参引用</h4>
+
+    <p class="p-tips">
+        ps：<br/>
+        <span class="s_icon">·</span> 新增部分传参功能，可以自定义动画幅度参数，实现同类型动画不同幅度；<br/>
+        <span class="s_icon">·</span> 传参功能不影响原来上面直接引用，参数都可为空，原来的动画幅度已经设为默认值；<br/>
+    </p>
+
+    <p>具体动画名和参数说明</p>
+    <table class="name-table" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr class="-tr">
+            <th width="17%">动画名</th>
+            <th width="58%">参数说明</th>
+            <th width="25%">栗子</th>
+        </tr>
+        <tr class="-tr">
+            <td>.bounce(@t; @n)</td>
+            <td>@t：抖动最小幅度（默认值4px）；@n：动画帧名（默认值bounce）</td>
+            <td>.bounce(5px; bounceA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.pulse(@t; @n)</td>
+            <td>@t：放大幅度（默认值1.05）；@n：动画帧名（默认值pulse）</td>
+            <td>.pulse(1.5; pulseA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.shake(@x; @n)</td>
+            <td>@x：抖动最小幅度（默认值10px）；@n：动画帧名（默认值shake）</td>
+            <td>.shake(20px; shakeA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.swing(@d; @n)</td>
+            <td>@d：旋转最小角度（默认值5deg）；@n：动画帧名（默认值swing）</td>
+            <td>.swing(5deg; swingA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.rotating(@d; @n)</td>
+            <td>@d：旋转的角度（默认值360deg）；@n：动画帧名（默认值rotating）</td>
+            <td>.rotating(180deg; rotateA); 注意.rotate(),在其他maxin库中是变形</td>
+        </tr>
+        <tr class="-tr">
+            <td>.wobble(@d; @n)</td>
+            <td>@d：摇摆最小幅度（默认值1deg）；@n：动画帧名（默认值wobble）</td>
+            <td>.wobble(-2deg; wobbleA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.fadeIn(@x; @y; @n)</td>
+            <td>@x：x轴移动距离（默认值0）；@y：y轴移动距离（默认值0）；@n：动画帧名（默认值fadeIn）</td>
+            <td>.fadeIn(-1000px; 0; fadeInA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.fadeOut(@x; @y; @n)</td>
+            <td>@x：x轴移动距离（默认值0）；@y：y轴移动距离（默认值0）；@n：动画帧名（默认值fadeOut）</td>
+            <td>.fadeOut(-1000px; 0; fadeOutA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipInDown(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipInDown）</td>
+            <td>.flipInDown(700px; flipInDownA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipInUp(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipInUp）</td>
+            <td>.flipInUp(700px; flipInUpA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipInLeft(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipInLeft）</td>
+            <td>.flipInLeft(700px; flipInLeftA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipInRight(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipInRight）</td>
+            <td>.flipInRight(700px; flipInRightA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipOutDown(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipOutDown）</td>
+            <td>.flipOutDown(700px; flipOutDownA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipOutUp(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipOutUp）</td>
+            <td>.flipOutUp(700px; flipOutUpA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipOutLeft(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipOutLeft）</td>
+            <td>.flipOutLeft(700px; flipOutLeftA)</td>
+        </tr>
+        <tr class="-tr">
+            <td>.flipOutRight(@p; @n)</td>
+            <td>@p：perspective值，元素距视图的距离（默认值600px）；@n：动画帧名（默认值flipOutRight）</td>
+            <td>.flipOutRight(700px; flipOutRightA)</td>
+        </tr>
+    </table>
+
+
+    <!-- 更新日志 -->
+    <h3 id="animation" class="main-wrap2">更新日志</h3>
+
+    <p><span class="s_icon">.</span> 2015/03/30 添加旋转动画,为了不和其他maxin库冲突,把选择名称定为.rotating();ing表示正在旋转,就是旋转动画的意思.修正部分错误.</p>
+
+    <p><span class="s_icon">.</span> 2015/03/27 去除pre前缀功能,该功能可以用lessHat.less,或者其他maxin库实现,这里不添加重复代码.</p>
+
+    <p><span class="s_icon">·</span> 2015/01/20 部分新增动画animation的mixin支持传参</p>
+
+    <p><span class="s_icon">·</span> 2015/01/10 增加turn Entrances（出现）和turn Exits（消失）系列动画</p>
+
+    <p class="cankao">
+        参考：https://github.com/daneden/animate.css &nbsp;&nbsp;&nbsp;&nbsp; https://github.com/w3cmark/css3
+    </p>
+
+</div>
+
+<div class="footer"> Powered by 小军</div>
+<script src="http://www.w3cmark.com/tools/js/jquery-1.11.0.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    $('#Jallnum').html($('#Jselect option').length);
+    function testAnim(x) {
+        $('#Janimate').removeClass().addClass(x + ' show-demo').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $(this).removeClass(x);
+        });
+        $('#Jselectname').val(x);
+    }
+    ;
+    // testAnim('bounce');
+
+    function scrollTo(name, add, speed) {//基于jq，根据dom元素的缓动锚点效果
+        if (!speed) speed = 300
+        if (!name) {
+            $('html,body').animate({
+                scrollTop: 0
+            }, speed)
+        } else {
+            if ($(name).length > 0) {
+                $('html,body').animate({
+                    scrollTop: $(name).offset().top + (add || 0)
+                }, speed)
+            }
+        }
+    }
+    // console.log()
+    $('.select-btn').click(function (e) {
+        e.preventDefault();
+        var anim = $('#Jselect').val();
+        testAnim(anim);
+    });
+    $('#Jselect').change(function () {
+        var anim = $(this).val();
+        testAnim(anim);
+    });
+    $('#Jselectname').bind('mouseover', function () {
+        // console.log($(this).val());
+        $(this).select();
+    })
+    $('.nav-a a').bind('click', function () {
+        setTimeout(function () {
+            if (location.hash) {
+                var index = location.hash.split('#')[1];
+                console.log(index);
+                $('.nav-a a').removeClass('cur');
+                $('.nav-a a').eq(index).addClass('cur');
+                scrollTo('.main-wrap' + index, -70);
+            }
+        }, 100)
+
+    })
+
+</script>
+</body>
+</html>
