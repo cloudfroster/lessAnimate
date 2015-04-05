@@ -4,7 +4,7 @@ var nowTime = new Date().toUTCString();
 
 var pkg = require('./package.json');
 var banner = ['// bulid time at <%= time %>',
-	  	      '// version : <%= version %>'].join('\n');
+	  	      '// version : <%= version %>\n'].join('\n');
 
 gulp.task('default',function(){
 	gulp.src('./server/css/maxin/lessAnimate.less')
